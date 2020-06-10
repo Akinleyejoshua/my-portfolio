@@ -1,0 +1,341 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.13);
+}
+
+header nav {
+    display: flex;
+    padding: 1em;
+}
+
+nav .nav-brand{
+    margin: 1em;
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-brand:hover{
+    text-decoration: none;
+    color: white;
+}
+
+nav .nav-bar{
+    margin-left: auto;
+    display: flex;
+}
+
+.nav-bar .nav-link{
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 600;
+    margin: 1em;
+    color: white;
+    padding: 10px 0px;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.nav-link::before{
+    content: '';
+    position: absolute;
+    margin: 10px 0;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    transition: all 500ms ease;
+    background-color: white;
+}
+
+.nav-link:hover:before{
+    width: 100%;
+}
+
+.navbar-toggler{
+    position: relative;
+    display: none;
+}
+
+.navbar-toggler div{
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transform: rotate(0deg);
+    left: 0;
+    border: none;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.navbar-toggler div.active:nth-child(3){
+    background: inherit;
+}
+
+.navbar-toggler div.active:nth-child(1){
+    transform: rotate(45deg);
+    position: absolute;
+    margin: 10px;
+}
+
+.navbar-toggler div.active:nth-child(2){
+    transform: rotate(-45deg);
+    position: absolute;
+    margin: 10px;
+}
+
+@media screen and (max-width: 500px){
+    header nav{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    header nav .nav-brand, .nav-bar .nav-link{
+        margin: 1rem 1rem;
+    }
+
+
+    header nav .nav-bar{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        height: 0;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+
+    header nav .nav-bar .nav-link{
+        margin: 0em;
+        padding: 1em;
+    }
+
+    header nav .nav-bar .nav-link:hover{
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    header nav .nav-bar .nav-link:before{
+        visibility: hidden;
+    }
+
+    header .navbar-toggler{
+        display: inline-block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+    }
+}
+
+.intro{
+    height: 100vh;
+    position: relative;
+    color: white;
+    background-size: 100% 100% ;
+    background-attachment: fixed ;
+}
+
+.intro-content{
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.288);
+    height: 100%;
+    justify-content: center;
+}
+
+.intro-content .container{
+    margin: 20;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+main .about{
+    margin: 4em;
+    box-shadow: 0 2px 5px rgba(128, 128, 128, 0.425);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    /* overflow: scroll; */
+    border-radius: 0.5rem;
+}
+
+.about .about-info{
+    /* background: whitesmoke; */
+    flex: 50%;
+    display: flex;
+    margin: 1rem;
+    width: 100%;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.about .about-info div{
+    margin: 0.1rem;
+}
+
+.about .info{
+    display: flex;
+}
+
+.about .skill{
+    text-align: center;
+    padding: 1em;
+}
+
+.about img{
+    border-radius: 50%;
+    /* margin: 1rem; */
+    height: 10em;
+    width: 10em;
+}
+
+.about .about-me{
+    flex: 50%;
+    margin: 1em 3rem;
+    /* text-align: center; */
+}
+
+
+#service{
+    display: flex;
+    justify-content: space-between;
+    margin: 5em;
+}
+
+#service .container{
+    padding: 1em;
+    box-shadow: 0px 3px 8px rgba(128, 128, 128, 0.39);
+    width: 20em;
+    height: 20em;
+    text-align: center;
+    border-radius: 1em;
+    margin: 1rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+
+footer{
+    display: flex;
+    padding: 2em 0;
+    text-align: center;
+    background: royalblue;
+    color: white;
+}
+
+footer address{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+
+footer .contact{
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.055);
+    margin: 1em 0;
+    top: 0;
+    width: 100%;
+}
+
+footer input{
+    border: 2px solid whitesmoke;
+    background: inherit;
+    padding: 0.5em;
+    color: white;
+}
+
+footer button{
+    border: white 2px solid;
+    background: inherit;
+    padding: 0.5rem;
+    color: white;
+    margin: 1em;
+}
+
+footer p{
+    margin: 1em;
+}
+
+input::placeholder{
+    color: white;
+    font-size: 1em;
+}
+
+
+@media (max-width: 500px){
+    .about .about-info{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .about img{
+        margin: 2rem 3.5rem;
+    }
+
+    .about div{
+        width: 100%;
+    }
+
+    .about .about-me{
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    main .about{
+        align-self: center;
+        margin: 1rem;
+    }
+
+    .info{
+        flex-direction: column;
+    }
+
+    #service{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    footer address{
+        flex-direction: column;
+    }
+}
+
+

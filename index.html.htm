@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/ionicons/css/ionicons.min.css">
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="">
+            <a href="index.html.htm" class="nav-brand">DevFolio</a>
+            <div class="navbar-toggler" onclick="toggleNav();">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-bar">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#service" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="intro route bg-image" style="background-image: url(assets/img/post-1.jpg) ">
+            <div class="intro-content">
+
+                <div class="container">
+                    <h1 class="intro-title">I am Joshua Akinleye</h1>
+                    <p class="intro-subtitle">
+                    <div class="text-slider-items">Web Developer, Software Developer, A.I Engineer</div>
+                    <strong class="text-slider"></strong>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="about" id="about">
+            <div class="info ">
+                <div>
+                    <div class="about-info">
+                        <div>
+                            <img src="assets/img/photo1.jpg">
+                        </div>
+                        <div class="">
+                            <div class="title">
+                                <p><b>Name: </b> Akinleye Joshua</p>
+                            </div>
+                            <div class="title">
+                                <p><b>Profile: </b> Software Developer</p>
+                            </div>
+                            <div class="title">
+                                <p><b>Email: </b> akinleyejoshua.dev@gmail.com</p>
+                            </div>
+                            <div class="title">
+                                <p><b>Phone: </b> +(234) 09025452313</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h5>Skills</h5>
+                        <span>HTML</span> <span class="pull-right">95%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span>CSS</span> <span class="pull-right">80%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span>Javascript</span> <span class="pull-right">65%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span>Bootstrap</span> <span class="pull-right">35%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="35"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span>React.js</span> <span class="pull-right">75%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span>Jquery</span> <span class="pull-right">40%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span>React Native</span> <span class="pull-right">50%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span>Machine Learning (numpy, pandas)</span> <span class="pull-right">10%</span>
+                        <div class="progress" style="height: 10px; border-radius: 0%;">
+                            <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="10"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-me">
+                    <h5>About Me</h5>
+                    <p class="lead">
+                        I am a full stack developer, experienced at all aspect of software development industry (Web,
+                        Desktop, Mobile and Artificial Intelligence). I am 18 by age, 5+ years of experience in the IT
+                        indutry
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 align="center">SERVICES</h2>
+        <div id="service">
+            <div id="web-development" class="container">
+                <i class="ion-code-working" style="font-size: 5em;"></i>
+                <h6>WEB DEVELOPMENT</h6>
+                <p>I offer quality web devlopment service</p>
+            </div>
+            <div id="mobile-development" class="container">
+                <i class="ion-android-phone-portrait" style="font-size: 5em;"></i>
+                <h6>MOBILE DEVLOPMENT</h6>
+                <p>I offer quality mobile devlopment service for differnt cross-platform e.g android and ios versions</p>
+            </div>
+            <div id="dektop-development" class="container">
+                <i class="ion-monitor" style="font-size: 5em;"></i>
+                <h6>DESKTOP DEVELOPMENT</h6>
+                <p>I offer quality Desktop devlopment service for differnt OS</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="contact" id="contact">
+                <h4>Get In Touch</h4>
+                <form">
+                    <div class="input">
+                        <input type="email" placeholder="Email me">
+                        <button>SEND</button>
+                    </div>
+                </form>
+            </div>
+
+            
+            <address>
+                <p><i class="ion-ios-telephone"></i> 09025452313</p>
+                <p><i class="ion-location"></i> 41, Igbehinadun street, Ojodu, Lagos, Nigeria</p>
+                <p><i class="ion-email"> akinleyejoshua.dev@gmail.com</i></p>
+            </address>
+
+            <div class="container">
+                &copy; Copyright <b>Akinleye Joshua</b> All right reserved
+            </div>
+
+        </footer>
+    </main>
+
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
