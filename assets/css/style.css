@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
+h1,h2,h3,h4,h5,h6{
+    color: royalblue;
+}
+
+p{
+    color: gray;
+}
+
 a{
     text-decoration: none;
 }
@@ -16,26 +24,38 @@ li{
 
 html{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
 }
 
 header{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
-    z-index: 10;
+    z-index: 1000;
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.13);
+    transition: .2s;
+}
+
+header.scroll{
+    background: white;
+    color: royalblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: .2s ease-in-out;
 }
 
 header nav {
     display: flex;
-    padding: 1em;
+    padding: 0em;
 }
 
 nav .nav-brand{
-    margin: 1em;
-    font-size: 1.3em;
+    align-self: center;
+    font-size: 1.1em;
     color: white;
     font-weight: bold;
+    margin: 0 2em;
+}
+
+.nav-brand.scroll{
+    color: royalblue;
 }
 
 .nav-brand:hover{
@@ -45,6 +65,7 @@ nav .nav-brand{
 
 nav .nav-bar{
     margin-left: auto;
+    align-self: center;
     display: flex;
 }
 
@@ -52,13 +73,13 @@ nav .nav-bar{
     text-transform: uppercase;
     position: relative;
     font-weight: 600;
-    margin: 1em;
+    margin: 1.5em;
     color: white;
     padding: 10px 0px;
 }
 
-.nav-link:hover{
-    color: white;
+.nav-link.scroll {
+    color: royalblue;
 }
 
 .nav-link::before{
@@ -72,7 +93,9 @@ nav .nav-bar{
     transition: all 500ms ease;
     background-color: white;
 }
-
+.nav-link.scroll::before{
+    background: royalblue;
+}
 .nav-link:hover:before{
     width: 100%;
 }
@@ -81,6 +104,7 @@ nav .nav-bar{
     position: relative;
     display: none;
 }
+
 
 .navbar-toggler div{
     display: block;
@@ -94,6 +118,10 @@ nav .nav-bar{
     border: none;
     opacity: 1;
     transition: 0.2s;
+}
+
+.navbar-toggler div.active, div.scroll{
+    background: royalblue;
 }
 
 .navbar-toggler div.active:nth-child(3){
@@ -112,19 +140,18 @@ nav .nav-bar{
     margin: 10px;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 640px){
     header nav{
         margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.5);
+        
     }
 
     header nav .nav-brand, .nav-bar .nav-link{
         margin: 1rem 1rem;
     }
-
 
     header nav .nav-bar{
         display: flex;
@@ -134,6 +161,7 @@ nav .nav-bar{
         height: 0;
         overflow: hidden;
         transition: 0.2s;
+        align-self: initial;
     }
 
     header nav .nav-bar .nav-link{
@@ -142,7 +170,7 @@ nav .nav-bar{
     }
 
     header nav .nav-bar .nav-link:hover{
-        background: rgba(0, 0, 0, 0.2);
+        background: whitesmoke;
     }
 
     header nav .nav-bar .nav-link:before{
@@ -150,9 +178,9 @@ nav .nav-bar{
     }
 
     header .navbar-toggler{
-        display: inline-block;
+        display: block;
         position: absolute;
-        top: 1rem;
+        top: .8rem;
         right: 1rem;
         border: none;
     }
@@ -180,129 +208,251 @@ nav .nav-bar{
     font-size: 1.2em;
 }
 
+.intro-title{
+    font-family: cursive;
+    font-size: 5em;
+    color: white;
+}
+
+main .profile{
+    margin: 4em;
+}
+
 
 main .about{
-    margin: 4em;
+    margin: 0em;
     box-shadow: 0 2px 5px rgba(128, 128, 128, 0.425);
     padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    /* overflow: scroll; */
+    overflow: auto;
     border-radius: 0.5rem;
+    display: flex;
 }
 
-.about .about-info{
+main .about-info{
+    margin: 1em;
+}
+
+main .info{
     /* background: whitesmoke; */
-    flex: 50%;
-    display: flex;
-    margin: 1rem;
-    width: 100%;
-    padding: 1em;
-    justify-content: space-between;
-}
-
-.about .about-info div{
-    margin: 0.1rem;
-}
-
-.about .info{
+    padding: 2em;
+    width: max-content;
     display: flex;
 }
 
-.about .skill{
-    text-align: center;
-    padding: 1em;
+main .about .about-info .info div{
+    margin: .2em;
 }
 
-.about img{
-    border-radius: 50%;
-    /* margin: 1rem; */
-    height: 10em;
+main .img{
+    align-self: center;
+    margin: 0 1em 0 0em;
+}
+
+main img{
     width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 5px solid royalblue;
 }
 
-.about .about-me{
-    flex: 50%;
-    margin: 1em 3rem;
-    /* text-align: center; */
+main .data{
+    align-self: center;
+
 }
 
-
-#service{
-    display: flex;
-    justify-content: space-between;
-    margin: 5em;
+main .about-me{
+    border: 2px solid whitesmoke;
+    /* border-radius: 10px; */
+    width: 100%;
+    height: max-content;
 }
 
-#service .container{
+main .about-me h5{
+    padding: .5em;
+    background: whitesmoke;
+}
+
+.about-me p{
     padding: 1em;
-    box-shadow: 0px 3px 8px rgba(128, 128, 128, 0.39);
+}
+
+main .about-skill{
+    border: 2px solid whitesmoke;
+    /* padding: 1em; */
+}
+
+.about-skill h5{
+    padding: .5em;
+    background: whitesmoke;
+}
+
+main .skill{
+    padding: 2em;
+}
+
+main .progress{
+    height: max-content;
+    border-radius: 0%;
+}
+
+main .progressbar{
+    background: royalblue;
+    height: 4px;
+    padding: 1em 0;
+}
+
+main #my-skill h6{
+    color: gray;
+    text-align: center;
+}
+
+main .progressbar p{
+    color: white;
+    font-size: .8em;
+    text-align: center;
+    font-weight: bolder;
+}
+
+main #service{
+    margin: 2em 0;
+}
+
+main #services{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+main #services .container{
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
     width: 20em;
     height: 20em;
     text-align: center;
-    border-radius: 1em;
-    margin: 1rem;
+    padding: 1em;
+    margin: 1em;
     align-self: center;
     cursor: pointer;
 }
 
-
-footer{
-    display: flex;
-    padding: 2em 0;
-    text-align: center;
-    background: royalblue;
-    color: white;
+main #contact{
+    margin: 2em;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-footer address{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-
-footer .contact{
-    padding: 1em;
-    background: rgba(0, 0, 0, 0.055);
-    margin: 1em 0;
-    top: 0;
+main .contact{
     width: 100%;
 }
 
-footer input{
-    border: 2px solid whitesmoke;
+main .contact form{
+    padding: 2em;
+    background: rgba(65, 105, 225, 0.753);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+main form input{
     background: inherit;
-    padding: 0.5em;
+    color: whitesmoke;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    font-family: monospace;
+    padding: .5em;
+}
+
+
+main .input{
+    margin: 1em 0;
+}
+
+main form button{
+    width: max-content;
+    margin: auto;
+    border: 2px solid whitesmoke;
+    background: rgba(65, 105, 225, 0);
+    color: white;
+    padding: .5em 2em;
+    border-radius: 10em;
+    margin-bottom: 1em;
+}
+
+main form button:hover{
+    background: white;
+    color: royalblue;
+}
+
+main .social-link{
+    margin: 0;
+}
+
+.social-link a{
     color: white;
 }
 
-footer button{
-    border: white 2px solid;
-    background: inherit;
-    padding: 0.5rem;
+footer{
+    background: royalblue;
     color: white;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 1);
+    margin-top: 5em;
+}
+
+footer .social-links{
+    padding: 1em;
+    text-align: center;
+}
+
+footer .social-links a{
     margin: 1em;
+}
+
+footer address{
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
 }
 
 footer p{
+    color: white;
     margin: 1em;
 }
 
-input::placeholder{
-    color: white;
-    font-size: 1em;
+footer .copy{
+    padding: 1em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.171);
 }
+@media (max-width: 960px){
+    main .profile{
+        margin: 0em;
+    }
 
+    .about{
+        flex-direction: column;
+    }
+    .intro-title{
+        font-family: cursive;
+        font-size: 1.5em;
+    }
 
-@media (max-width: 500px){
     .about .about-info{
         flex-direction: column;
         margin: 0;
     }
 
-    .about img{
-        margin: 2rem 3.5rem;
+    .about .info{
+        flex-direction: column;
+    }
+
+    .about .img{
+        display: flex;
+        justify-content: center;
     }
 
     .about div{
@@ -319,18 +469,19 @@ input::placeholder{
         margin: 1rem;
     }
 
+    #services{
+        flex-direction: column;
+    }
+
+    main #services .container{
+        width: 100%;
+    }
     .info{
         flex-direction: column;
     }
 
-    #service{
-        flex-direction: column;
-        justify-content: center;
-    }
-
     footer{
         flex-direction: column;
-        padding: 2rem;
     }
 
     footer address{
