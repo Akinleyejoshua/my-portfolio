@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
     <header class="fixed-top">
         <nav class="">
             <a href="index.html.htm" class="nav-brand">Portfolio</a>
@@ -20,15 +23,17 @@
                 <div></div>
             </div>
             <div class="nav-bar">
-                <a href="#home" class="nav-link"><i class="ion-home" style="font-size: 1em;"></i></a>
-                <a href="#about" class="nav-link">About</a>
+                <a href="#home" class="nav-link"><i class="ion-home" style="font-size: 1em;"></i> Home</a>
+                <a href="#about" class="nav-link"><i class="ion-ios-paper-outline"></i> About</a>
                 <a href="#service" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link"><i class="ion-ios-telephone"></i></a>
+                <a href="#contact" class="nav-link"><i class="ion-ios-telephone"></i> Contact</a>
+                <a href="#" class="nav-link"><i class="ion-document-text"></i> CV</a>
             </div>
         </nav>
     </header>
 
     <main>
+        
         <div id="home" class="intro" style="background-image: url(assets/img/post-1.jpg) ">
             <div class="intro-content">
                 <div class="container">
@@ -69,7 +74,7 @@
                         <div class="skill">
                             <div id="my-skill">
                                 <p>
-                                <h6>HTML</h6>
+                                <h6>HTML <i class="ion-social-html5" style="color: orange;"></i></h6>
                                 </p>
                                 <div class="progress">
                                     <div class="progressbar" style="width: 95%;">
@@ -79,7 +84,7 @@
                             </div>
                             <div id="my-skill">
                                 <p>
-                                <h6>CSS</h6>
+                                <h6>CSS <i class="ion-social-css3" style="color: royalblue;"></i></h6>
                                 </p>
                                 <div class="progress">
                                     <div class="progressbar" style="width: 80%;">
@@ -130,7 +135,24 @@
                         age till this moment. And i am also a fast learner, That one of the reason my skill status
                         increases periodically with team work. Thanks
                     </p>
+                    <div id="projects" class="acc">
+                        <button class="accordion">Projects <i class="ion-android-arrow-dropdown icon"></i></button>
+                        <div class="panel">
+                            <ul>
+                                <li>Portfolio (HTML, CSS, BOOTSTRAP, JQUERY, JS)</li>
+                                <li>Responsive Header (HTML, CSS, JS)</li>
+                                <li>Responsive Footer (HTML, CSS, JS)</li>
+                                <li>Responsive Image Slide (HTML, CSS, JS)</li>
+                                <li>Drop Down Menu (HTML, CSS)</li>
+                                <li>Accordion (HTML, CSS, JS)</li>
+                                <li>Responsive Side Bar (HTML, CSS, JS)</li>
+                                <li>Login, Signup, Contact Form (HTML, CSS, JS)</li>
+                                <li>e.t.c</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -145,13 +167,13 @@
                         code, responsive design and the likes</p>
                 </div>
                 <div class="container">
-                    <i class="ion-android-phone-portrait" style="font-size: 6em;"></i>
+                    <i class="ion-iphone" style="font-size: 6em;"></i>
                     <h6>MOBILE DEVELOPMENT</h6>
                     <p>Yes with team work, i can assure you a good mobile development service. with a good maintainable
                         code and versions for all mobile platform (ios, android)</p>
                 </div>
                 <div class="container">
-                    <i class="ion-monitor" style="font-size: 6em;"></i>
+                    <i class="ion-ios-monitor-outline" style="font-size: 6em;"></i>
                     <h6>DESKTOP DEVELOPMENT</h6>
                     <p>Yes with team work, i can assure you a good desktop application development service. with a good
                         maintainable code, and distribution for all OS platform</p>
@@ -170,33 +192,41 @@
             <div class="contact" style="background: url(assets/img/post-3.jpg) fixed 100% 100%;">
                 <form>
                     <div class="input">
-                        <label>Email</label>
+                        <label><i class="ion-email" style="font-size: 1.5em;"></i></label>
                         <br>
                         <input type="email">
                     </div>
                     <div class="input">
-                        <label>Message</label>
+                        <label><i class="ion-android-textsms" style="font-size: 1.5em;"></i></label>
                         <br>
                         <input type="text">
                     </div>
                     <br>
-                    <button>SEND MESSAGE</button>
-                    <hr style="background: whitesmoke; width: 1em; align-self: center;">
+                    <button><i class="ion-android-send"></i></button>
+                    <hr style="background: whitesmoke; width: 5em; align-self: center;">
                     <div class="social-link">
-                        <a class="ion-social-github" style="font-size: 2em; cursor: pointer;" href="https://www.github/Akinleyejoshua"></a>
-                        <a class="ion-social-linkedin" style="font-size: 2em; cursor: pointer;" href="https://www.linkedin/akinleyejoshua"></a>
+                        <a class="ion-social-github" style="font-size: 2em; cursor: pointer;"
+                            href="https://www.github.com/Akinleyejoshua"></a>
+                        <a class="ion-social-linkedin" style="font-size: 2em; cursor: pointer;"
+                            href="https://www.linkedin.com/akinleyejoshua"></a>
+                        <a href="#" class="ion-social-facebook" style="font-size: 2em; cursor: pointer;"></a>
+                        <a href="#" class="ion-social-twitter" style="font-size: 2em; cursor: pointer;"></a>
+                        <a href="#" class="ion-social-whatsapp" style="font-size: 2em; cursor: pointer;"></a>
                     </div>
                 </form>
             </div>
         </div>
-            
+
     </main>
 
     <footer>
+        <div class="scroll-up">
+            <button><i class="ion-arrow-up-b" style="font-size: 1.2em;"></i></button>
+        </div>
         <div class="social-links">
             <a href="#"><img src="assets/icons/145802.svg" style="height: 2em;"></a>
             <a href="#"><img src="assets/icons/145812.svg" style="height: 2em;"></a>
-            <a href="#"><img src="assets/icons/174879.svg" style="height: 2em;"></a>
+            <!-- <a href="#"><img src="assets/icons/174879.svg" style="height: 2em;"></a> -->
         </div>
         <address>
             <p><i class="ion-location"></i> 41, Igbehinadun street, Ojodu, Lagos, Nigeria.</p>
@@ -204,7 +234,7 @@
             <p><i class="ion-ios-telephone"></i> + 234 09025452313</p>
         </address>
         <div class="copy">
-            &copy; Akinleye Joshua 2020
+            &copy; <strong>Portfolio</strong> Copyright 2020
         </div>
     </footer>
 

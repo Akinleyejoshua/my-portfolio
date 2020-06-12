@@ -6,8 +6,6 @@ var nav = document.querySelector('.nav-bar');
 var navToggler = document.querySelectorAll('.navbar-toggler div')
 
 const toggleNav = () => {
-
-
     if (nav.style.height) {
         nav.style.height = null;
         for (let index = 0; index < navToggler.length; index++) {
@@ -43,3 +41,29 @@ $(window).on('scroll', () => {
     }
 })
 
+
+var acc = $(".accordion");
+acc.on("click", function () {
+    var accIndicator = $(".accordion .icon")
+    var panel = this.nextElementSibling;
+    if (panel.style.height) {
+        panel.style.height = null;
+        acc.removeClass("active-acc");
+    } else {
+        acc.addClass("active-acc");
+        panel.style.height = panel.scrollHeight + "px";
+        accIndicator.addClass("active-acc-icon")
+    }
+})
+
+var scrollTopBtn = $(".scroll-up button");
+scrollTopBtn.on("click", () => {
+    window.scroll(0, 0)
+})
+
+
+var preload = $(".preloader");
+
+$(document).ready(() => {
+    preload.hide()
+})
