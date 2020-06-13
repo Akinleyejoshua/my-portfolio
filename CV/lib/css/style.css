@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main{
+    position: relative;
+}
+
+main .cv{
+    height: max-content;
+    display: flex;
+    justify-content: center;
+}
+
+main .background{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: blur(.5em);
+}
+
+main .content{
+    display: inline-flex;
+    align-self: center;
+    top: 0;
+    position: absolute;
+}
+main .container{
+    color: gray;
+    background: white;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    margin: .5em;
+    border-radius: .2em;
+    padding: 1.5em;
+    width: 30em;
+    height: max-content;
+}
+main .container:hover{
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.05);
+}
+
+.content .cv-profile{
+}
+
+.content .cv-objective{
+}
+
+.content .cv-edu-qual{
+}
+
+.content .cv-qual-high{
+    padding: 3em; 
+}
+
+.content .cv-emp-exp{
+}
+
+.content .cv-skill-assets{
+    background: inherit;
+    color: white;
+}
+
+.content .cv-data{
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+
+.cv .navbar{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    ;
+    padding: 1em;
+    box-shadow: 0 0 2px black;
+    right: 0;
+}
+
+@media (max-width: 760px){
+    main .content{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main .container{
+        width: 100%;
+        margin: .5em 0;
+    }
+
+    main .background{
+        height: 0;
+    }
+    main .content .cv-skill-assets{
+        background: initial;
+        color: gray;
+    }
+    main .content .cv-data{
+        margin-bottom: 5em;
+    }
+}
